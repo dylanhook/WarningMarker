@@ -1,0 +1,33 @@
+<scroll-view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd">
+    <horizontal pad-top="2">
+        <vertical spacing="1" pad-right="2" preferred-width="40">
+            <text text="Warning Types" font-size="4" align="Center" underlined="true"/>
+            <bool-setting text="Resets" value="show-resets-value" apply-on-change="true" bind-value="true"/>
+
+            <bool-setting text="Horizontals" value="show-horizontals-value" apply-on-change="true" bind-value="true"/>
+            <bool-setting text="All Notes" value="show-all-notes-value" apply-on-change="true" bind-value="true"/>
+        </vertical>
+        <vertical spacing="1" pad-left="2" preferred-width="40">
+            <text text="Layer Filters" font-size="4" align="Center" underlined="true"/>
+            <bool-setting text="Top Layer" value="show-top-layer-value" apply-on-change="true" bind-value="true"/>
+            <bool-setting text="Middle Layer" value="show-middle-layer-value" apply-on-change="true" bind-value="true"/>
+            <bool-setting text="Bottom Layer" value="show-bottom-layer-value" apply-on-change="true" bind-value="true"/>
+        </vertical>
+    </horizontal>
+    
+    <vertical pad-top="4" spacing="10">
+        <text text="Marker Settings" font-size="4" align="Center" underlined="true"/>
+        <horizontal>
+            <vertical preferred-width="40" pad-right="2" spacing="0">
+                <text text="Size" align="Center"/>
+                <slider-setting text="" value="marker-size-value" min="0.05" max="0.5" increment="0.01" apply-on-change="true" bind-value="true" formatter="marker-size-formatter"/>
+            </vertical>
+            <vertical preferred-width="40" pad-left="2" spacing="0">
+                <text text="Offset" align="Center"/>
+                <slider-setting text="" value="marker-offset-value" min="0" max="5" increment="0.1" apply-on-change="true" bind-value="true" formatter="marker-offset-formatter"/>
+            </vertical>
+        </horizontal>
+    </vertical>
+    
+
+</scroll-view>

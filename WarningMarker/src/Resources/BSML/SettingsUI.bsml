@@ -1,0 +1,12 @@
+<scroll-view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd">
+    <vertical pad-top="5" spacing="2" horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
+        <bool-setting text="Simple detection" value="enable-simple-detection" apply-on-change="true" bind-value="true"/>
+        <bool-setting text="Advanced detection" value="enable-advanced-detection" apply-on-change="true" bind-value="true"/>
+        <bool-setting text="HMD Only Marker" value="enable-hmd-only" apply-on-change="true" bind-value="true"/>
+    </vertical>
+
+    <vertical pad-top="10" spacing="4">
+         <button text="Reset to Defaults" on-click="reset-settings" />
+         <text text='maintained by youtube.com/dylanhook' align='Center' font-size='3' color='#888888'/>
+    </vertical>
+</scroll-view>
