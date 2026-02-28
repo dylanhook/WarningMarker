@@ -23,7 +23,6 @@ namespace WarningMarker.Installers
                 .UnderTransformGroup("WarningMarkers");
 
             Container.BindInterfacesAndSelfTo<WarningManager>().AsSingle();
-            Container.BindInterfacesAndSelfTo<HmdLayerManager>().AsSingle();
             Container.BindInterfacesAndSelfTo<ParityAnalysisManager>().AsSingle();
         }
     }

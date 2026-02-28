@@ -2,6 +2,7 @@ using IPA.Utilities;
 using JetBrains.Annotations;
 using UnityEngine;
 using Zenject;
+using CameraUtils.Core;
 
 using WarningMarker.Configuration;
 
@@ -13,7 +14,6 @@ namespace WarningMarker
         private MeshRenderer _meshRenderer;
         private MeshFilter _meshFilter;
         private MaterialPropertyBlock _propertyBlock;
-        private static int _firstPersonLayer = -1;
         private static Material _sharedMaterial;
 
         private Color _baseColor;
@@ -35,12 +35,6 @@ namespace WarningMarker
 
             _meshFilter = gameObject.GetComponent<MeshFilter>();
             if (_meshFilter == null) _meshFilter = gameObject.AddComponent<MeshFilter>();
-
-            if (_firstPersonLayer == -1)
-            {
-                _firstPersonLayer = LayerMask.NameToLayer("HmdOnly");
-                if (_firstPersonLayer == -1) _firstPersonLayer = 17;
-            }
 
             if (_proceduralMesh == null)
             {
@@ -204,7 +198,7 @@ namespace WarningMarker
 
                 var color = _colorManager.ColorForType(noteController.noteData.colorType);
                 item.Setup(color);
-                item.gameObject.layer = PluginConfig.HmdOnly ? _firstPersonLayer : 0;
+                item.gameObject.SetLayer(PluginConfig.HmdOnly ? VisibilityLayer.HmdOnlyAndReflected : VisibilityLayer.Default);
 
                 if (item._meshFilter != null)
                 {

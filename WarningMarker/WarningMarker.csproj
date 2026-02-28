@@ -6,7 +6,7 @@
         <Nullable>disable</Nullable>
         <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
         <LocalRefsDir Condition="Exists('..\Refs')">..\Refs</LocalRefsDir>
-        <BeatSaberDir Condition=" '$(BeatSaberDir)' == '' ">D:\Games\BSManager\BSInstances\1.42.2</BeatSaberDir>
+        <BeatSaberDir Condition=" '$(BeatSaberDir)' == '' ">D:\Games\BSManager\BSInstances\1.40.8</BeatSaberDir>
         <AppOutputBase>$(MSBuildProjectDirectory)\</AppOutputBase>
         <Copyright>dylanhook</Copyright>
         <AssemblyName>WarningMarker</AssemblyName>
@@ -48,6 +48,9 @@
         </Reference>
         <Reference Include="BSML">
             <HintPath>$(BeatSaberDir)\Plugins\BSML.dll</HintPath>
+        </Reference>
+        <Reference Include="CameraUtils">
+            <HintPath>$(BeatSaberDir)\Plugins\CameraUtils.dll</HintPath>
         </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
